@@ -10,7 +10,7 @@ public class RemoveDuplicates {
 
     }
 
-    public int removeDuplicates(int[] nums) {
+    public void removeDuplicates(int[] nums) {
         for(int i =0; i<nums.length-1; i++)
         {
             for(int k=i+1; k<nums.length; k++)
@@ -33,6 +33,6 @@ public class RemoveDuplicates {
                 System.out.println(nums[j]);
             }
         }
-        return 0;
+
     }
 }
