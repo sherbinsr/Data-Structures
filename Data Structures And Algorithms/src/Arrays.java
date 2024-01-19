@@ -33,7 +33,10 @@ public class Arrays {
 	//ar.Array(arr);
 	System.out.println(findmissingnumber(arr));
 	}
-	public void movezerotoend(int arr[]) 
+
+
+
+    public void movezerotoend(int arr[])
 	{
 		int n=arr.length;
 		int j=0;
