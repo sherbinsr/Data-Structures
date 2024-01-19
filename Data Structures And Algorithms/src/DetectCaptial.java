@@ -13,7 +13,8 @@ public class DetectCaptial {
 
         String upperCase=word.toUpperCase();
         String lowerCase=word.toLowerCase();
-        
+
+
 
         int size = word.length();
 
