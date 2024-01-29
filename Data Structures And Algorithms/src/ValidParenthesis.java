@@ -35,7 +35,7 @@ public class ValidParenthesis {
 	public static void main(String[] args) {
 		
      ValidParenthesis vp =new ValidParenthesis();
-     vp.isvalid("()");
+		System.out.println(vp.isvalid("()"));
 		
 	}
 
