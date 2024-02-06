@@ -161,7 +161,9 @@ public class LinkedList {
 	public  void deleteElement(int match)
 	{
 		ListNode current =head;
-		while (current!=null) {
+
+		while (current.next!=null) {
+
 			if (current.data == match)
 			{
 				ListNode pointer = current.next;
