@@ -158,7 +158,20 @@ public class LinkedList {
 		}
 		
 	}
-	
+	public  void deleteElement(int match)
+	{
+		ListNode current =head;
+		while (current!=null) {
+			if (current.data == match)
+			{
+				ListNode pointer = current.next;
+				current.data= pointer.data;
+				current.next=pointer.next;
+
+			}
+			current= current.next;
+		}
+	}
 	public void display()
 	{
 
@@ -222,9 +235,11 @@ public class LinkedList {
 	  //System.out.println(ls.middlenode().data);
 		ls.checknode(5);
 		ls.reverse(fourthnode);
-		//ls.deleteposition(3);
+		ls.deleteposition(1);
+		ls.deleteElement(1);
 		ls.display();
 		ls.length();
+
 		
 		//lss.display();
 		//lss.length();
