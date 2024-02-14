@@ -8,10 +8,16 @@ public class ReverseString {
     public void reverseString(char[] s) {
 
 
+        int j=0;
         for (int i=s.length-1; i>=0; i--)
         {
-            System.out.print(s[i]+",");
+           s[j]=s[i];
+           j=i-1;
 
+        }
+        for (int i=0; i<s.length; i++)
+        {
+            System.out.print(s[i]);
         }
 
     }
