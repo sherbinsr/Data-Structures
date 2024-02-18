@@ -3,6 +3,8 @@ public class FibonacciNumber {
 
         FibonacciNumber fibonacciNumber = new FibonacciNumber();
         System.out.println(fibonacciNumber.fib(4));
+
+
     }
     public int fib(int n) {
 
