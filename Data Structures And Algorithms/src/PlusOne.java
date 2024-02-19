@@ -7,22 +7,35 @@ public class PlusOne {
         int digits[] ={4,3,2,1};
 
         PlusOne po = new PlusOne();
-        po.plusOne(digits);
+       int [] res= po.plusOne(digits);
+       for(int num:res)
+       {
+           System.out.println(num);
+       }
     }
-    public void plusOne(int[] digits) {
+    public int[] plusOne(int[] digits) {
 
         int len= digits.length;
 
+        int add=0;
         for(int i=0; i<len; i++)
         {
             if(i==len-1)
             {
-                digits[i]=digits[i]+1;
+                    add = digits[i] + 1;
+
+                    if(add==10)
+                    {
+                        digits[i]=0;
+                    }
+                    else
+                    {
+                        digits[i]=digits[i]+1;
+                    }
             }
-            System.out.println(digits[i]);
         }
 
 
-
+     return digits;
     }
 }

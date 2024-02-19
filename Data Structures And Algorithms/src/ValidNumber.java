@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class ValidNumber {
     public static void main(String[] args) {
 
@@ -10,19 +13,19 @@ public class ValidNumber {
 
         String alaphbets="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-,";
 
-        if(s.length()==1 && s.charAt(0)=='.' ||s.equals(".."))
-        {
-            return res=false;
-        }
+        Set<Character> set = new HashSet<>();
 
+        for(int i=0; i<alaphbets.length(); i++)
+        {
+            set.add(alaphbets.charAt(i));
+        }
         for(int i=0; i<s.length(); i++)
         {
-            for(int j=0; j<alaphbets.length(); j++)
+
+            if(set.contains(s.charAt(i)) || s.charAt(i)=='.' && s.length()>=1 ||s.equals("..") )
             {
-                if(s.charAt(i)==alaphbets.charAt(j))
-                {
-                    res =false;
-                }
+                res=false;
+                break;
             }
         }
 

@@ -92,6 +92,23 @@ public class LinkedList {
 		
 		
 	}
+	public void printFromMiddleElement()
+	{
+		ListNode fstptr=head;
+		ListNode slwptr=head;
+		while(fstptr!=null && fstptr.next!=null) {
+
+			slwptr=slwptr.next;
+			fstptr=fstptr.next.next;
+		}
+		while (slwptr!=null)
+		{
+			System.out.println(slwptr.data);
+			slwptr=slwptr.next;
+
+		}
+
+	}
 	public void dupicateelement() {
 		
 		ListNode current =head;
@@ -235,10 +252,11 @@ public class LinkedList {
 	   //ls.insertpost(1, 50);
 	  // ls.insertpost(4, 80);
 	  //System.out.println(ls.middlenode().data);
-		ls.checknode(5);
-		ls.reverse(fourthnode);
-		ls.deleteposition(1);
-		ls.deleteElement(1);
+		//ls.checknode(5);
+		//ls.reverse(fourthnode);
+		//ls.deleteposition(1);
+		//ls.deleteElement(1);
+		ls.printFromMiddleElement();
 		ls.display();
 		ls.length();
 
