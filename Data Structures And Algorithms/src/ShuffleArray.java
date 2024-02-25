@@ -7,7 +7,7 @@ public class ShuffleArray {
         int[]res= shuffleArray.shuffle(nums,3);
         for (int num:res)
         {
-            System.out.println(num);
+           // System.out.println(num);
         }
     }
     public int[] shuffle(int[] nums, int n) {
@@ -18,12 +18,12 @@ public class ShuffleArray {
 
           if(i%2==0)
           {
-              res[i]=nums[i/2];
+              res[i]=nums[i/2];//0,1,2
+
           }
           else
           {
-
-              res[i]=nums[n+i/2];
+              res[i]=nums[n+i/2]; ///3,4,5
           }
 
         }
