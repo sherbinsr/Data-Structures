@@ -217,10 +217,19 @@ public class LinkedList {
 		   current=next;
 		   
 	   }return previous;
-	
-	   
-	  	   
    }
+	public int getDecimalValue(ListNode head) {
+
+	  int res=head.data;
+
+	  while (head.next!=null)
+	  {
+		  res =res*2+head.next.data;
+		  head=head.next;
+	  }
+
+	  return res;
+	}
 	
 	public static void main(String[] args) {
 		
