@@ -11,14 +11,13 @@ public class ReverseString {
         int j=0;
         for (int i=s.length-1; i>=0; i--)
         {
+            char temp=s[i];
            s[j]=s[i];
+           s[i]=temp;
            j=i-1;
 
         }
-        for (int i=0; i<s.length; i++)
-        {
-            System.out.print(s[i]);
-        }
+
 
     }
 }
