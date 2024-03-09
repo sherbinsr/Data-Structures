@@ -43,6 +43,31 @@ public class LinkedList {
 	 
 	
   }
+	public ListNode removeNthFromEnd(ListNode head, int n) {
+
+		ListNode current = head;
+		int totalNodes = 0;
+		while(current != null){
+			totalNodes++;
+			current = current.next;
+		}
+
+		int count = totalNodes - n;
+		if(count == 0)
+		{
+			return head.next;
+		}
+
+		current = head;
+		int counter=count-1;
+		while(counter > 0){
+			current = current.next;
+			counter--;
+
+		}
+		current.next = current.next.next;
+		return head;
+	}
 	
   public void deleteposition(int position) {
 	  
@@ -65,19 +90,20 @@ public class LinkedList {
   }
 		
 
-	public void length() {
-	
+	public int length() {
+
 	 ListNode current = head;
-	 
+
 	 int count=0;
 	 while(current!=null) {
 		 
 		current=current.next;
 		count++;
 	 }
-	 System.out.println(count);
+	return count;
 		
 	}
+
 	
 	public ListNode middlenode() {
 		
@@ -266,9 +292,10 @@ public class LinkedList {
 		//ls.reverse(fourthnode);
 		//ls.deleteposition(1);
 		//ls.deleteElement(1);
-		ls.printFromMiddleElement();
-		ls.display();
-		ls.length();
+		 ls.removeNthFromEnd(ls.head ,2);
+		//ls.printFromMiddleElement();
+		 ls.display();
+		//ls.length();
 
 		
 		//lss.display();
