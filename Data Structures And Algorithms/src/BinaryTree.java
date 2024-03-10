@@ -124,6 +124,30 @@ public class BinaryTree {
 		}
 		
 	}
+
+	int k;
+	int result=0;
+	public int kthSmallest(TreeNode root, int k) {
+
+		this.k=k;
+		inorder(root);
+		return result;
+
+	}
+	 public void inorder(TreeNode root)
+	 {
+		 if(root==null)
+		 {
+			 return;
+		 }
+		 inorder(root.left);
+		 if(--k==0)
+		 {
+			 result=root.data;
+			 return;
+		 }
+		 inorder(root.right);
+	 }
 	public static void main(String[] args) {
 		
 		BinaryTree bt = new BinaryTree();
@@ -131,7 +155,8 @@ public class BinaryTree {
 		//bt.PreOrder(bt.root);
 		//bt.IterativePreOrder();
 		//bt.Inorder(root);
-		bt.postorder(root);
-		System.out.print(bt.findmax(root));
+		//bt.postorder(root);
+		System.out.println(bt.kthSmallest(root,3));
+		//System.out.print(bt.findmax(root));
 	}
 }
