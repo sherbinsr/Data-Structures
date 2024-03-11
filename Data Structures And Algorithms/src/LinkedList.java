@@ -201,21 +201,27 @@ public class LinkedList {
 		}
 		
 	}
-	public  void deleteElement(int match)
+	public  ListNode deleteElement(int match)
 	{
+
+		while (head!=null && head.data==match)
+		{
+			head=head.next;
+		}
 		ListNode current =head;
 
-		while (current.next!=null) {
+		while (current!=null && current.next!=null) {
 
-			if (current.data == match)
+			if (current.next.data == match)
 			{
-				ListNode pointer = current.next;
-				current.data= pointer.data;
-				current.next=pointer.next;
-
+				current.next=current.next.next;
 			}
+			else
+			{
 			current= current.next;
+		    }
 		}
+		return head;
 	}
 	public void display()
 	{
