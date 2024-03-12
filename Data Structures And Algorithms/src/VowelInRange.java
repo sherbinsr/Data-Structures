@@ -20,6 +20,7 @@ public class VowelInRange
         set.add('i');
         set.add('o');
         set.add('u');
+        set.add('d');
         for(int i=left; i<=right; i++)
         {
             if(set.contains(words[i].charAt(0)) && set.contains(words[i].charAt(words[i].length()-1)))
