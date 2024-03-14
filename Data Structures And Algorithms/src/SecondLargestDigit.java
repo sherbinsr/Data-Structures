@@ -7,7 +7,7 @@ public class SecondLargestDigit
     public static void main(String[] args) {
 
         SecondLargestDigit largestDigit = new SecondLargestDigit();
-        System.out.println(largestDigit.secondHighest("dfa12321afd"));
+        System.out.println(largestDigit.secondHighest("dfa12321afdf"));
     }
     public int secondHighest(String s)
     {
