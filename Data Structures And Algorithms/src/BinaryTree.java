@@ -157,6 +157,26 @@ public class BinaryTree {
 		 }
 		 inorder(root.right);
 	 }
+	public boolean checkTree(TreeNode root) {
+
+		/*
+		You are given the root of a binary tree that consists of exactly 3 nodes: the root, its left child, and its right child.
+        Return true if the value of the root is equal to the sum of the values of its two children, or false otherwise.
+
+
+		 */
+		 int right= root.right.data;
+		 int left= root.left.data;
+
+		if(right+left== root.data) {
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+
+	}
 	public static void main(String[] args) {
 		
 		BinaryTree bt = new BinaryTree();
