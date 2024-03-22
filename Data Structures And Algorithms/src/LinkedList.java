@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class LinkedList {
 
 	private ListNode head;
@@ -263,7 +265,44 @@ public class LinkedList {
 	  return res;
 	}
 
-	
+	public boolean isPalindrome(ListNode head) {
+		if (head == null || head.next == null) {
+			return true;
+		}
+		ListNode slow = head;
+		ListNode fast = head;
+		while (fast.next != null && fast.next.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		ListNode secondHalf = reverse(slow.next);
+		ListNode firstHalf = head;
+		while (secondHalf != null) {
+			if (firstHalf.data != secondHalf.data) {
+				return false;
+			}
+			firstHalf = firstHalf.next;
+			secondHalf = secondHalf.next;
+		}
+
+		return true;
+	}
+	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
+
+			ListNode list1=reverse(l1);
+			ListNode list2 =reverse(l2);
+
+			while (list1!=null)
+			{
+				System.out.println(list1.data);
+				list1=list1.next;
+
+
+			}
+
+
+	}
 	public static void main(String[] args) {
 		
 		LinkedList ls = new LinkedList();
