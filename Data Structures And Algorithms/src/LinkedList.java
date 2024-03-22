@@ -287,22 +287,7 @@ public class LinkedList {
 
 		return true;
 	}
-	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-
-			ListNode list1=reverse(l1);
-			ListNode list2 =reverse(l2);
-
-			while (list1!=null)
-			{
-				System.out.println(list1.data);
-				list1=list1.next;
-
-
-			}
-
-
-	}
 	public static void main(String[] args) {
 		
 		LinkedList ls = new LinkedList();
