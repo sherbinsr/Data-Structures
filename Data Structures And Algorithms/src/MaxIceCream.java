@@ -21,7 +21,6 @@ public class MaxIceCream
         for(int i=0; i< costs.length; i++)
         {
             res+=costs[i];
-
             if(res<=coins)
             {
                 count++;
