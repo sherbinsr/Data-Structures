@@ -5,7 +5,7 @@ public class ShuffleString {
 
         int[] indices ={4,5,6,7,0,1,2,3};
         ShuffleString string = new ShuffleString();
-        System.out.println(string.restoreString("codeleet",indices));
+        System.out.println(string.restoreString("Codeleet",indices));
 
     }
 
