@@ -7,15 +7,15 @@ public class BatteryPercentage {
     }
     public int countTestedDevices(int[] batteryPercentages) {
 
-        int higehest=batteryPercentages[0];
+        int count=0;
 
         for(int i=0; i< batteryPercentages.length; i++) {
 
-            if (higehest<batteryPercentages[i])
-            {
-                higehest=batteryPercentages[i];
-            }
+          if(batteryPercentages[i]>count)
+          {
+              count++;
+          }
         }
-        return higehest;
+        return count;
     }
 }
