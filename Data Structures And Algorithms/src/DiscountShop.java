@@ -12,12 +12,19 @@ public class DiscountShop
     public int[] finalPrices(int[] prices) {
 
         int[] res=new int[prices.length];
-        for (int i=0; i<prices.length; i++)
+        for(int i=0; i< prices.length; i++)
         {
-            int j=i+1;
-            if(i>j)
+             res[i]=prices[i];
+            for(int j=i+1; j< prices.length; j++)
             {
-                res[i]=prices[i]-prices[j];
+                if(prices[j] <= prices[i])
+                {
+                    res[i]-=prices[j];
+                    break;
+                }
+
+
+
             }
         }
         return res;
