@@ -19,10 +19,10 @@ public class BusStops
           if( start>destination && (i>=start || i<destination))
           {
               stops+=distance[i];
+              
           }
           total+=distance[i];
         }
-
       int  min=Math.min(stops,(total-stops));
         return min;
 
