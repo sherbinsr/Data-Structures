@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class BinarySearchTree {
    
@@ -54,6 +57,8 @@ public class BinarySearchTree {
 	
 		
 	}
+
+	List<Integer>li = new ArrayList<>();
 	public void inorder(TreeNode root) 
 	{
 		if(root==null) 
@@ -61,8 +66,15 @@ public class BinarySearchTree {
 			return;
 		}
 		inorder(root.left);
-		System.out.print(root.data+" ");
+		li.add(root.data);
 		inorder(root.right);
+	}
+	public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
+
+			inorder(root1);
+			inorder(root2);
+		Collections.sort(li);
+		return li;
 	}
 	
 	public static void main(String[] args) {
