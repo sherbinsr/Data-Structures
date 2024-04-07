@@ -69,6 +69,12 @@ public class BinarySearchTree {
 		li.add(root.data);
 		inorder(root.right);
 	}
+	//inorder traversal via list
+	public List<Integer> inorderTraversal(TreeNode root) {
+
+		inorder(root);
+		return li;
+	}
 	public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
 
 			inorder(root1);
