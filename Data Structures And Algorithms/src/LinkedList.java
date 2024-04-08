@@ -105,7 +105,32 @@ public class LinkedList {
 	return count;
 		
 	}
+	public int pairSum(ListNode head) {
 
+	  int max=0;
+
+	  int[] nodes= new int[length()];
+
+	  int index=0;
+	  ListNode current =head;
+
+	  while (current!=null)
+	  {
+		  nodes[index]=current.data;
+		  index++;
+		  current=current.next;
+	  }
+
+	  int n= nodes.length;
+
+	  for(int i=0; i< n; i++)
+	  {
+		  int sum=nodes[i]+nodes[n-1-i];
+		  max=Math.max(max,sum);
+	  }
+
+	  return max;
+	}
 	
 	public ListNode middlenode() {
 		

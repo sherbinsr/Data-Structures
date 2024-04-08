@@ -55,7 +55,7 @@ public class BinarySearchTree {
 			return search(root.right,key);
 		}
 	
-		
+
 	}
 
 	List<Integer>li = new ArrayList<>();
