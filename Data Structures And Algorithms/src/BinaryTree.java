@@ -85,6 +85,13 @@ public class BinaryTree {
 		System.out.println(root.data);
 		Inorder(root.right);
 	}
+
+	List<Integer>li = new ArrayList<>();
+	public List<Integer> postorderTraversal(TreeNode root) {
+
+		postorder(root);
+		return li;
+	}
 	public void postorder(TreeNode root) 
 	{
 
@@ -94,7 +101,7 @@ public class BinaryTree {
 		}
 		Inorder(root.left);
 		Inorder(root.right);
-		System.out.println(root.data);
+		li.add(root.data);
 	}
 	public int findmax(TreeNode root) 
 	{
