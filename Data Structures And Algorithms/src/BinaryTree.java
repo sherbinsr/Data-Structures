@@ -187,6 +187,21 @@ public class BinaryTree {
 		}
 
 	}
+	int sum=0;
+	public TreeNode convertBST(TreeNode root) {
+
+		if(root==null)
+		{
+			return null;
+		}
+
+		convertBST(root.right);
+		sum+=root.data;
+		root.data=sum;
+		convertBST(root.left);
+
+		return  root;
+	}
 	public static void main(String[] args) {
 		
 		BinaryTree bt = new BinaryTree();
