@@ -40,6 +40,7 @@ public class BinarySearchTree {
 		return root;
 		
 	}
+
 	public TreeNode search(TreeNode root, int key) 
 	{
 		if(root==null||root.data==key) 

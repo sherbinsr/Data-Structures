@@ -8,6 +8,7 @@ public class KthDistinctString
         String [] arr ={"d","b","c","b","c","a"};
         KthDistinctString kthDistinctString = new KthDistinctString();
         System.out.println(kthDistinctString.kthDistinct(arr,2));
+
     }
     public String kthDistinct(String[] arr, int k) {
 
