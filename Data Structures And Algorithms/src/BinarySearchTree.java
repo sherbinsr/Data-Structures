@@ -62,7 +62,7 @@ public class BinarySearchTree {
 	List<Integer>li = new ArrayList<>();
 
 	public boolean isUnivalTree(TreeNode root) {
-		int data=root.val;
+		int data=root.data;
 		return check(root,data);
 
 	}
