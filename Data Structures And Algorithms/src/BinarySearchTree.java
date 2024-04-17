@@ -60,7 +60,23 @@ public class BinarySearchTree {
 	}
 
 	List<Integer>li = new ArrayList<>();
-	public void inorder(TreeNode root) 
+
+	public boolean isUnivalTree(TreeNode root) {
+		int data=root.val;
+		return check(root,data);
+
+	}
+	boolean check(TreeNode root, int val){
+		if(root==null){
+			return true;
+		}
+		if(root.data!=val){
+			return false;
+		}
+		return check(root.left,val) && check(root.right,val);
+
+	}
+	public void inorder(TreeNode root)
 	{
 		if(root==null) 
 		{
