@@ -99,7 +99,24 @@ public class BinarySearchTree {
 		Collections.sort(li);
 		return li;
 	}
-	
+	public void flatten(TreeNode root) {
+		if (root == null) return;
+		List<Integer> values = new ArrayList<>();
+		preorder(root, values);
+		TreeNode current = root;
+		for (int i = 1; i < values.size(); i++) {
+			current.left = null;
+			current.right = new TreeNode(values.get(i));
+			current = current.right;
+		}
+	}
+
+	public void preorder(TreeNode root, List<Integer> values) {
+		if (root == null) return;
+		values.add(root.data);
+		preorder(root.left, values);
+		preorder(root.right, values);
+	}
 	public static void main(String[] args) {
 	BinarySearchTree bst =  new BinarySearchTree();
 	bst.insert(8);

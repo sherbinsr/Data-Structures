@@ -3,9 +3,9 @@ public class HarshadNumber
     public static void main(String[] args) {
 
         HarshadNumber harshadNumber = new HarshadNumber();
-        System.out.println(harshadNumber.sumOfTheDigitsOfHarshadNumber(18));
+        System.out.println(harshadNumber.sumOfTheDigitsOfHarshadNum(18));
     }
-    public int sumOfTheDigitsOfHarshadNumber(int x) {
+    public int sumOfTheDigitsOfHarshadNum(int x) {
 
 
         int num=x;
