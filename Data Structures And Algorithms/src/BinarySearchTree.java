@@ -117,6 +117,23 @@ public class BinarySearchTree {
 		preorder(root.left, values);
 		preorder(root.right, values);
 	}
+	public TreeNode removeLeafNodes(TreeNode root, int target) {
+
+		return  helper(root,target);
+	}
+	TreeNode helper(TreeNode root , int target) {
+		if(root==null)
+		{
+			return null;
+		}
+		root.left=helper(root.left,target);
+		root.right=helper(root.right,target);
+		if(root.data==target && root.left==null && root.right==null)
+		{
+			return null;
+		}
+		return root;
+	}
 	public static void main(String[] args) {
 	BinarySearchTree bst =  new BinarySearchTree();
 	bst.insert(8);
