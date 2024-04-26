@@ -9,7 +9,16 @@ public class TransposeMatrix
                         {7,8,9}
                 };
         TransposeMatrix transposeMatrix = new TransposeMatrix();
-        transposeMatrix.transpose(matrix));
+        int [][] res= transposeMatrix.transpose(matrix);
+
+        for (int i=0; i< res.length; i++)
+        {
+            for(int j=0; j<res[i].length; j++)
+            {
+                System.out.println(res[i][j]);
+            }
+        }
+
     }
 
     public int[][] transpose(int[][] matrix) {
