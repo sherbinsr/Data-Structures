@@ -14,7 +14,23 @@ public class LeftSumAndRightSum
 
 
     }
-    public int[] leftRightDifference(int[] nums) {
+
+    public int[] leftRightDifference(int[] nums){
+        int[] arr = new int[nums.length];
+        int left = 0;
+        int right = 0;
+        for (int i = 0; i < nums.length; i++) {
+            right += nums[i];
+        }
+        for (int i = 0; i < nums.length; i++) {
+            right -= nums[i];
+            arr[i] = Math.abs(left - right);
+            left += nums[i];
+        }
+
+        return arr;
+    }
+   /* public int[] leftRightDifference(int[] nums) {
 
         int leftSum[] = leftSum(nums);
 
@@ -70,4 +86,6 @@ public class LeftSumAndRightSum
         return leftSum;
 
     }
+
+    */
 }
