@@ -8,8 +8,9 @@ public class TwoSums {
         ts.twoSum(nums,9);
     }
 
-    public void twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] nums, int target) {
 
+        int [] index  = new int[2];
         for(int i =0; i<nums.length-1; i++)
         {
 
@@ -20,12 +21,14 @@ public class TwoSums {
                 if(add==target)
                 {
                     System.out.println(i+","+k);
+                    index[0]=i;
+                    index[1]=k;
                 }
 
             }
 
         }
-
+        return  index;
 
     }
 
